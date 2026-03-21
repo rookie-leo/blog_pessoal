@@ -160,3 +160,36 @@ main {
     flex: 1 0 auto;
     min-width: 0;
 }
+
+.emphasis-item {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);;
+}
+
+.emphasis-item summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    list-style: none;
+}
+
+.emphasis-item summary::-webkit-details-marker {
+    display: none;
+}
+.emphasis-item summary::after {
+    content: " +";
+    color: #faef56;
+    font-weight: bold;
+}
+
+.emphasis-item[open] summary::after {
+    content: " -";
+}
+
+.emphasis-item p {
+    margin-top: 12px;
+    color: #eaeaea;
+}
